@@ -1,0 +1,32 @@
+import math  # Pi sayısını kullanmak için
+
+def cember_alani(r):
+    return math.pi * r ** 2
+def kare_alan(kenar):
+    return kenar**2
+def dikdortgen_alan(kisa,uzun):
+    return kisa*uzun
+print("Yapmak istediğiniz eylemi seçin;")
+print("1-Çember Alanı")
+print("2-Kare Alanı")
+print("3-Dikdörtgen alanı")
+secim= input("seçiminizi yapın:(1/2/3):")
+if secim in ["1","2","3"]:
+    if secim == "1":
+        yaricap = float(input("Çemberin yarıçapını girin: "))
+        alan = cember_alani(yaricap)
+        print(f"Çemberin alanı: {alan:.2f}")
+    elif secim == "2":
+        kenar= float(input("karenin bir kenarını girin:"))
+        alan= kare_alan(kenar)
+        print(f"karenin alanı: {alan:.2f}")
+    elif secim == "3":
+          kisa= float(input("kısa kenarı girin:"))
+          uzun= float(input("uzun kenarı girin:"))
+          alan= dikdortgen_alan(kisa, uzun)
+          print(f"dikdörtgenin alanı:{alan:.2f}")
+    else:
+              print("geçersiz işlem")
+          
+      
+        
