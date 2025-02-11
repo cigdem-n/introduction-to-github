@@ -1,0 +1,36 @@
+def toplama(a,b):
+    return a+b
+def çıkarma(a,b):
+    return a-b
+def çarpma(a,b):
+    return a*b
+def bölme(a,b):
+    return a/b
+    if b == 0:
+     return"sayı/0 tanımıszdır!"
+     return a/b
+def üs(a,b):
+     return a**b
+print("yapılacak işlemi seçiniz:")
+print("1-toplama")
+print("2-çıkarma")
+print("3-çarpma")
+print("4-bölme")
+print("5-üs")
+secim = input("seçiminizi yapın (1/2/3/4/5):")
+if secim in ["1","2","3","4","5"]:
+    a= float(input("1. değeri giriniz:"))
+    b= float(input("2.değeri giriniz:"))
+    if secim =="1":
+        sonuc = toplama(a, b)
+    elif secim =="2":
+        sonuc = çıkarma(a, b)
+    elif secim == "3":
+        sonuc =çarpma(a, b)
+    elif secim == "4":
+        sonuc = bölme(a, b)
+    elif secim == "5":
+        sonuc = üs(a, b)
+    print(f"Sonuç={sonuc}")  
+else:        
+         print("geçersiz seçim yaptınız tekrar deneyin!!!")
